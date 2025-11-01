@@ -31,16 +31,16 @@ body {
 
 /* Header & Navigation */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow);
 }
 
 .navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
     padding: 1rem 0;
+    box-shadow: var(--shadow);
 }
 
 .navbar .container {
@@ -121,11 +121,7 @@ header {
 .product-section {
     padding: 4rem 0;
     background-color: var(--bg-white);
-    scroll-margin-top: 100px;
-}
-
-.product-section:first-of-type {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 80px;
 }
 
 .product-section.alt-bg {
@@ -262,7 +258,7 @@ header {
 .reviews-section {
     padding: 4rem 0;
     background: linear-gradient(135deg, var(--secondary-color) 0%, #fff8f0 100%);
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
 }
 
 .reviews-grid {
@@ -306,7 +302,7 @@ header {
 .contacts-section {
     padding: 4rem 0;
     background-color: var(--bg-white);
-    scroll-margin-top: 100px;
+    scroll-margin-top: 80px;
 }
 
 .contacts-content {
