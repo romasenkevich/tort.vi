@@ -350,6 +350,22 @@
             });
         });
 
+        // Эффект уменьшения и прозрачности header при прокрутке
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
         // Показ изображений при загрузке
         document.querySelectorAll('.gallery-item img').forEach(img => {
             img.onerror = function() {
