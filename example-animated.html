@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример с анимациями</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        /* CSS Анимация - плавное появление */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated-box {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 15px;
+            margin: 2rem auto;
+            animation: fadeIn 1s ease-out, pulse 2s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .animated-box:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Пульсация */
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+            }
+        }
+
+        /* Вращающаяся карточка */
+        .card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+
+        /* Анимация загрузки */
+        .loader {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 2rem 0;
+        }
+
+        .loader div {
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: bounce 1.4s ease-in-out infinite both;
+        }
+
+        .loader div:nth-child(1) { animation-delay: -0.32s; }
+        .loader div:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+
+        .info {
+            color: #666;
+            line-height: 1.8;
+            margin-top: 2rem;
+        }
+
+        .info strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Примеры анимаций</h1>
+        
+        <div class="card">
+            <p><strong>Hover эффект:</strong> Наведите на карточку</p>
+        </div>
+
+        <div class="animated-box"></div>
+        <p style="text-align: center; color: #666;">Нажмите на блок выше</p>
+
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="info">
+            <p><strong>Все эти анимации работают на GitHub Pages!</strong></p>
+            <p>Использованы:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li>CSS <code>@keyframes</code> анимации</li>
+                <li>CSS <code>transition</code> эффекты</li>
+                <li>CSS <code>:hover</code> псевдокласс</li>
+                <li>CSS <code>transform</code> и <code>animation</code></li>
+            </ul>
+            <p style="margin-top: 1rem;">Можно также использовать JavaScript для интерактивных анимаций!</p>
+        </div>
+    </div>
+
+    <script>
+        // Пример JavaScript анимации
+        const box = document.querySelector('.animated-box');
+        let rotation = 0;
+
+        box.addEventListener('click', function() {
+            rotation += 360;
+            this.style.transform = `scale(1.1) rotate(${rotation}deg)`;
+            setTimeout(() => {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+
