@@ -253,10 +253,9 @@ header.scrolled .nav-menu a {
 /* Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
-    justify-content: center;
 }
 
 .gallery-item {
@@ -267,7 +266,6 @@ header.scrolled .nav-menu a {
     transition: transform 0.3s, box-shadow 0.3s;
     background: white;
     aspect-ratio: 1;
-    max-width: 300px;
 }
 
 .gallery-item:hover {
