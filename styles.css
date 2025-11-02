@@ -99,6 +99,24 @@ header.scrolled .nav-menu a {
     border-bottom: 2px solid white;
 }
 
+.nav-menu a.creative-link {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #2D1B3D;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s;
+    border: none;
+}
+
+.nav-menu a.creative-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+    opacity: 1;
+    border-bottom: none;
+}
+
 .hero {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
@@ -497,6 +515,11 @@ footer p {
 
     .nav-menu li {
         flex: 0 0 auto;
+    }
+
+    .nav-menu a.creative-link {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
     }
 
     .hero {

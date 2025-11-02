@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Творческие проекты | Кондитерская</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="creative.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">🍰 Кондитерская</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="creative.html" class="creative-link">✨ Творчество</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-creative">
+        <div class="container">
+            <h2 class="hero-title">Творческие проекты</h2>
+            <p class="hero-subtitle">Авторские работы и необычные решения</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- Project 1 -->
+            <section class="creative-project">
+                <div class="project-content">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="carousel1">
+                            <div class="carousel-slide active">
+                                <img src="pics/other1-1.png" alt="Торт месяц 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other1-2.png" alt="Торт месяц 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other1-3.png" alt="Торт месяц 3">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide('carousel1', -1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide('carousel1', 1)">›</button>
+                        <div class="carousel-dots" id="dots1">
+                            <span class="dot active" onclick="currentSlide('carousel1', 0)"></span>
+                            <span class="dot" onclick="currentSlide('carousel1', 1)"></span>
+                            <span class="dot" onclick="currentSlide('carousel1', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <h3>🌠 торт в виде месяца с ночным небом</h3>
+                        <p class="subtitle">Листай карусель и рассмотри со всех сторон 🤩</p>
+                        <div class="details">
+                            <p><strong>Вес:</strong> 1 кг</p>
+                            <p><strong>Внутри начинка «сникерс»:</strong> шоколадные бисквиты, молочная пропитка, сливочная карамель, арахис, крем-чиз</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 2 -->
+            <section class="creative-project">
+                <div class="project-content reverse">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="carousel2">
+                            <div class="carousel-slide active">
+                                <img src="pics/other2.png" alt="Торт 2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <h3>Творческий проект</h3>
+                        <div class="details">
+                            <p>Описание скоро появится...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 3 -->
+            <section class="creative-project">
+                <div class="project-content">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="carousel3">
+                            <div class="carousel-slide active">
+                                <img src="pics/other3-1.png" alt="Торт ботинок 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other3-2.png" alt="Торт ботинок 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other3-3.png" alt="Торт ботинок 3">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide('carousel3', -1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide('carousel3', 1)">›</button>
+                        <div class="carousel-dots" id="dots3">
+                            <span class="dot active" onclick="currentSlide('carousel3', 0)"></span>
+                            <span class="dot" onclick="currentSlide('carousel3', 1)"></span>
+                            <span class="dot" onclick="currentSlide('carousel3', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <h3>Ботинок или торт?</h3>
+                        <p class="subtitle">да, это торт 🍰</p>
+                        <div class="details">
+                            <p><strong>Вес:</strong> 2 кг</p>
+                            <p><strong>Декор выполнен из мастики.</strong></p>
+                            <p><strong>Начинка:</strong> шоколад-карамель</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 4 -->
+            <section class="creative-project">
+                <div class="project-content reverse">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="carousel4">
+                            <div class="carousel-slide active">
+                                <img src="pics/other4-1.png" alt="Торт черепаха 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other4-2.png" alt="Торт черепаха 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other4-3.png" alt="Торт черепаха 3">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide('carousel4', -1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide('carousel4', 1)">›</button>
+                        <div class="carousel-dots" id="dots4">
+                            <span class="dot active" onclick="currentSlide('carousel4', 0)"></span>
+                            <span class="dot" onclick="currentSlide('carousel4', 1)"></span>
+                            <span class="dot" onclick="currentSlide('carousel4', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <h3>Торт может быть любым.. даже в виде черепахи 🐢💔</h3>
+                        <div class="details">
+                            <p>На фото торт весом <strong>3 кг</strong>, декор выполнен с помощью мастики, начинка: <strong>«молочная девочка»</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 5 -->
+            <section class="creative-project">
+                <div class="project-content">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="carousel5">
+                            <div class="carousel-slide active">
+                                <img src="pics/other5-1.png" alt="Торт салат 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other5-2.png" alt="Торт салат 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="pics/other5-3.png" alt="Торт салат 3">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide('carousel5', -1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide('carousel5', 1)">›</button>
+                        <div class="carousel-dots" id="dots5">
+                            <span class="dot active" onclick="currentSlide('carousel5', 0)"></span>
+                            <span class="dot" onclick="currentSlide('carousel5', 1)"></span>
+                            <span class="dot" onclick="currentSlide('carousel5', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <h3>Торт в виде САЛА 🥩</h3>
+                        <div class="details">
+                            <p><strong>Декор выполнен из мастики.</strong> Внутри ванильный бисквит, клубничное конфи и крем-чиз 🍓</p>
+                            <p><strong>Вес торта:</strong> 1,5 кг (без декора)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Кондитерская. Все права защищены.</p>
+            <p><a href="index.html" style="color: white; text-decoration: underline;">Вернуться на главную</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function changeSlide(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dotsId = carouselId.replace('carousel', 'dots');
+            const dots = document.getElementById(dotsId).querySelectorAll('.dot');
+            
+            let currentIndex = 0;
+            slides.forEach((slide, index) => {
+                if (slide.classList.contains('active')) {
+                    currentIndex = index;
+                }
+            });
+            
+            slides[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+            
+            currentIndex += direction;
+            if (currentIndex >= slides.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+            
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function currentSlide(carouselId, index) {
+            const carousel = document.getElementById(carouselId);
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dotsId = carouselId.replace('carousel', 'dots');
+            const dots = document.getElementById(dotsId).querySelectorAll('.dot');
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        // Автопрокрутка каруселей (опционально)
+        document.querySelectorAll('.carousel-container').forEach(carousel => {
+            let autoSlide = setInterval(() => {
+                const carouselId = carousel.id;
+                changeSlide(carouselId, 1);
+            }, 5000);
+            
+            carousel.addEventListener('mouseenter', () => clearInterval(autoSlide));
+            carousel.addEventListener('mouseleave', () => {
+                autoSlide = setInterval(() => {
+                    changeSlide(carouselId, 1);
+                }, 5000);
+            });
+        });
+
+        // Эффект header при прокрутке
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
