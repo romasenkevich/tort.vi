@@ -264,21 +264,14 @@ header.scrolled .nav-menu a {
     padding: 1rem 0;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) transparent;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .mini-menu-scroll::-webkit-scrollbar {
-    height: 6px;
-}
-
-.mini-menu-scroll::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.mini-menu-scroll::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 3px;
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 .mini-menu-item {
