@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Капкейки | Кондитерская</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">🍰 Кондитерская</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная (Меню)</a></li>
+                    <li><a href="index.html#contacts">Контакты</a></li>
+                    <li><a href="creative.html" class="creative-link">✨ Творчество</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h2 class="hero-title">Капкейки</h2>
+            <p class="hero-subtitle">Нежные капкейки с различными начинками</p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Капкейки -->
+        <section class="product-section">
+            <div class="container">
+                <h2 class="section-title">Капкейки</h2>
+                <div class="product-info">
+                    <div class="price-info">
+                        <p class="price"><strong>1 штука — 6 BYN</strong></p>
+                        <p class="min-order">Минимальный заказ — 6 штук</p>
+                    </div>
+                    
+                    <div class="flavors">
+                        <h3>Вкусы</h3>
+                        <ul class="flavor-list">
+                            <li>Красный бархат</li>
+                            <li>Шоколад</li>
+                            <li>Ваниль</li>
+                        </ul>
+                    </div>
+
+                    <div class="fillings">
+                        <h3>Начинки</h3>
+                        <ul class="flavor-list">
+                            <li>Клубника</li>
+                            <li>Вишня</li>
+                            <li>Карамель</li>
+                            <li>Малина</li>
+                        </ul>
+                    </div>
+
+                    <div class="decor-info">
+                        <p class="extra"><strong>Доплата за сложный декор:</strong><br>
+                        пряники, сахарная печать, ягоды и т.д.</p>
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="pics/cupcake1.png" alt="Капкейк 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="pics/cupcake2.png" alt="Капкейк 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contacts" class="contacts-section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contacts-content">
+                    <div class="contact-info">
+                        <h3>Свяжитесь со мной для заказа</h3>
+                        <div class="contact-item">
+                            <strong>📱 Телефон:</strong>
+                            <p><a href="tel:+375297130705">+375 29 713-07-05</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>💬 Telegram:</strong>
+                            <p><a href="https://t.me/vichkachech" target="_blank">@vichkachech</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>📧 Email:</strong>
+                            <p><a href="mailto:Viktorijachech@icloud.com">Viktorijachech@icloud.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>📍 Instagram:</strong>
+                            <p><a href="https://instagram.com/vichkachech" target="_blank">@vichkachech</a></p>
+                        </div>
+                    </div>
+                    <div class="order-info">
+                        <h3>Как сделать заказ?</h3>
+                        <ol class="order-steps">
+                            <li>Свяжитесь со мной любым удобным способом</li>
+                            <li>Выберите тип десерта и вкус</li>
+                            <li>Обсудим детали оформления</li>
+                            <li>Согласуем дату и время получения</li>
+                            <li>Наслаждайтесь вкусным десертом!</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Кондитерская. Все права защищены.</p>
+            <p>Авторские торты и десерты на заказ</p>
+        </div>
+    </footer>
+
+    <script>
+        // Эффект уменьшения и прозрачности header при прокрутке
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Показ изображений при загрузке
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.onerror = function() {
+                this.style.display = 'none';
+            };
+        });
+    </script>
+</body>
+</html>
+
