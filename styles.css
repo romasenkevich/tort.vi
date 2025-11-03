@@ -264,14 +264,25 @@ header.scrolled .nav-menu a {
     padding: 1rem 0;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
 }
 
 .mini-menu-scroll::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+}
+
+.mini-menu-scroll::-webkit-scrollbar-track {
+    display: none !important;
+    background: transparent !important;
+}
+
+.mini-menu-scroll::-webkit-scrollbar-thumb {
+    display: none !important;
+    background: transparent !important;
 }
 
 .mini-menu-item {
